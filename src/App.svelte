@@ -101,8 +101,8 @@
 </main>
 
 <footer>
-    <p class="source">Source:  <a href="https://mcs.bc.ca/about_bcahs" target="_blank">tK</a></p>
-    <div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/2282024/?utm_source=embed&utm_campaign=story/2282024' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
+    <p class="source">Source:  <a href="tk" target="_blank">tK</a></p>
+    <!-- <div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/2282024/?utm_source=embed&utm_campaign=story/2282024' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div> -->
 </footer>
   
 <style>
