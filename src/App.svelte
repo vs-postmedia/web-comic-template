@@ -1,6 +1,7 @@
 <script>
     // COMPONENTS
     // import { onMount } from 'svelte';
+    import QuoteBox from '$components/Quote-box.svelte';
 
     // IMAGES
     import smith from '$images/smith.jpg';
@@ -51,14 +52,14 @@
         <p>of teens in B.C., according to the survey....</p>
     </div>
     <div class="row">
-        <div class="panel full no-border" id="nb-pct-quote">
-            <div class="image-quote-block center">
-                <img src={deleon} class="right" />
-                <p class="quote-text"><span class="opening-quote">“</span>That five per cent is made up of youth, and youth who are struggling. And you can’t just swipe that under the rug. <span class="purple">These are people, these are kids.</span> And to ignore them, you’re neglecting this huge community.”</p>
-            </div>
-            
-            <p class="name-title">– Nik De Leon, a nonbinary and genderqueer 18-year-old</p>
-        </div>
+        <QuoteBox 
+            align='right'
+            id='deleon'
+            image={deleon}
+            imageAlt=''
+            source='Nik De Leon, a nonbinary and genderqueer 18-year-old'
+            quoteText='That five per cent is made up of youth, and youth who are struggling. And you can’t just swipe that under the rug. <span class="purple">These are people, these are kids.</span> And to ignore them, you’re neglecting this huge community.'
+        />
     </div>
     <div class="row" id="panel-outcomes">
         <div class="panel full">
@@ -67,20 +68,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="panel full no-border" id="smith-quote">
-            <div class="image-quote-block center left">
-                <img src={smith} class="left"/>
-                <p class="quote-text"><span class="opening-quote">“</span>We definitely see young people who identify as nonbinary experiencing higher rates of <span class="purple">violence, discrimination, harassment, abuse, social exclusion, trauma, stigma.</span>”</p>
-            </div>
-            <p class="name-title">– Annie Smith, executive director of the McCreary Centre Society</p>
-        </div>
+        <QuoteBox 
+            align='left'
+            id='smith-quote'
+            image={smith}
+            quoteText='We definitely see young people who identify as nonbinary experiencing higher rates of <span class="purple">violence, discrimination, harassment, abuse, social exclusion, trauma, stigma.</span>'
+            source='Annie Smith, executive director of the McCreary Centre Society'
+        />
     </div>
-    <!-- <div class="panel half">
-        <p>NBY COMMENT</p>
-    </div>
-    <div class="panel half">
-        <p>TRAVERS COMMENT</p>
-    </div> -->
     <div class="row" id="solutions-row">
         <div class="panel full no-border">
             <h2 class="center subhead purple-backdrop">Solutions exist, experts say, but there’s lots of work to be done</h2>
@@ -91,63 +86,40 @@
         </div>
     </div>
     <div class="row">
-        <div class="panel full no-border" id="smith-quote-02">
-            <div class="image-quote-block center">
-                <img src={smith} class="right" />
-                <p class="quote-text"><span class="opening-quote">“</span>It’s <span class="purple">all our responsibility</span> to really look at this data and think about how we can make safer spaces for these young people. <span class="purple">Because we know they’ll thrive if we do.</span>”</p>
-            </div>
-        </div>
+        <QuoteBox 
+            align='right'
+            id='smith-quote-02'
+            image={smith}
+            maxWidth='150px'
+            quoteText='It’s <span class="purple">all our responsibility</span> to really look at this data and think about how we can make safer spaces for these young people. <span class="purple">Because we know they’ll thrive if we do.</span>'
+        />
     </div>
 </main>
 
 <footer>
     <p class="source">Source:  <a href="tk" target="_blank">tK</a></p>
-    <!-- <div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/story/2282024/?utm_source=embed&utm_campaign=story/2282024' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div> -->
 </footer>
   
 <style>
     @import '$css/normalize.css';
-    /* @import '$css/fonts.css'; */
+    @import '$css/fonts.css';
     @import '$css/colors.css';
     @import '$css/app.css';
     @import '$css/layout.css';
     /* @import '$css/legend.css'; */
 
-    /* FONTS */
-    @font-face {
-	    font-family: 'Shift-BoldItalic';
-	    src: url('$fonts/Shift-BoldItalic.otf') format('opentype');
-    }
-    /* BENTON SANS */
-    @font-face {
-        font-family: 'BentonSansCond-Regular';
-        src: url('$fonts/BentonSansCond-Regular.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'BentonSansCond-RegItalic';
-        src: url('$fonts/BentonSansCond-RegItalic.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'BentonSansCond-Bold';
-        src: url('$fonts/BentonSansCond-Bold.otf') format('opentype');
-    }
-    @font-face {
-        font-family: 'BentonSansCond-BoldItalic';
-        src: url('$fonts/BentonSansCond-BoldItalic.otf') format('opentype');
-    }
 
-
-    #container .bold {
+    :global(#container .bold) {
         font-family: 'BentonSansCond-Bold';
     }
-    #container .bold-italic {
+    :global(#container .bold-italic) {
         font-family: 'BentonSansCond-BoldItalic';
     }
-    #container .note {
+    :global(#container .note) {
         color: var(--grey03);
         font-family: 'BentonSansCond-RegItalic';
     }
-    #container .center {
+    :global(#container .center) {
         margin: 0 auto;
         text-align: center;
     }
@@ -156,7 +128,7 @@
         margin: 5px;
         width: 50px;
     }
-    #app .source a:hover {
+    :global(#app .source a:hover) {
 	    color: var(--brite_purple01);
 	    transition: color ease-in-out 0.3s;
     }

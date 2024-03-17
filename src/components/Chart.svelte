@@ -1,6 +1,5 @@
 <script>
     export let data = [];
-    export let value = '';
 
     // LIBS
     import { onMount } from 'svelte';
@@ -34,7 +33,6 @@
 </script>
 
 <pre>{`CHART: Resolved data = ${JSON.stringify(data)}`}</pre>
-<pre>CHART: Combobox value = {value || 'No selection'}</pre>
 
 <div class="chart-container" bind:clientWidth={width}>
 
