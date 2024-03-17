@@ -1,0 +1,27 @@
+#container .legend {
+    display: flex;
+    font-size: 0.9rem;
+    height: 0;
+    justify-content: center;
+    margin: 0 10px;
+}
+#container .legend p {
+    color: #898B8E;
+    margin: 0 6px;
+}
+#container .swatch {
+    border-radius: 50%;
+    display: inline-block;
+    height: 14px;
+    margin-right: 4px;
+    width: 14px;
+}
+#container .swatch.green {
+    background-color: var(--green01);
+}
+#container .swatch.lite-green {
+    background-color: #84bb8a;
+}
+#container .swatch.purple {
+    background-color: var(--brite_purple01);
+}
