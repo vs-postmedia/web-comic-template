@@ -46,7 +46,6 @@ header .subhead {
 #container .panel {
     border: 3.5px solid rgb(155,63,134);
     border-radius: 5px;
-    /* margin: 1rem 0; */
     padding: 5px;
     position: relative;
 }
@@ -92,7 +91,6 @@ header .subhead {
     height: auto;
     justify-content: center;
     line-height: 1.5;
-    /* margin: 15px 0; */
     text-align: center;
 }
 #container .text-container {
@@ -132,13 +130,4 @@ header .subhead {
     #container .text-block p {
         margin: 0.5rem;
     }
-    /* #container .image-quote-block {
-        width: 80%
-    }
-    #container .panel .name-title {
-        margin: 7px 10% 0 40%;
-    }
-    #container .image-quote-block.left img {
-        left: -25px;
-    } */
 }
